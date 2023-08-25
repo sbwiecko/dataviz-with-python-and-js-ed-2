@@ -8,3 +8,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .ipynb_checkpoints/
+
+# environments
+.env

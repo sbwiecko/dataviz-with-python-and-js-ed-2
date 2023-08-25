@@ -15,7 +15,7 @@ let studentData = [
   { name: "Bob", id: 0, scores: [68, 75, 76, 81] },
   { name: "Alice", id: 1, scores: [75, 90, 64, 88] },
   { name: "Carol", id: 2, scores: [59, 74, 71, 68] },
-  { name: "Dan", id: 3, scores: [64, 58, 53, 62] },
+  { 'name': "Dan", id: 3, scores: [64, 58, 53, 62] }, //valid inconsistency in the object keys quoted/unquoted
 ];
 
 function processStudentData(data, passThreshold = 60, meritThreshold = 75) {
