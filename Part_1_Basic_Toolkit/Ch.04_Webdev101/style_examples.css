@@ -1,0 +1,9 @@
+.alert {
+    font-weight: bold;
+    color: red !important;
+}
+
+#special-alert {
+    background: yellow;
+    color: black;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground basics SVG</title>
+</head>
+<style>
+    svg#chart {
+        background: lightgray;
+    }
+
+    #chart circle {
+        fill: blue;
+    }
+
+    #chart line {
+        stroke: green;
+        stroke-width: 3px;
+        opacity: .5;
+    }
+    
+    #chart circle {
+    fill: lightblue;
+    }
+
+    #chart line {
+        stroke: #555555;
+        stroke-width: 4;
+    }
+    
+    #chart rect {
+        stroke: red;
+        fill: white;
+    }
+    
+    #chart polygon {
+        fill: green;
+    }
+
+</style>
+<body>
+    <svg id="chart" width="300" height="225">
+        <circle r="15" cx="100" cy="50"></circle>
+        <line x1="20" y1="20" x2="20" y2="130"></line>
+        <line x1="20" y1="130" x2="280" y2="130"></line>
+        <rect x="240" y="5" width="55" height="30"></rect>
+        <polygon points="210,100, 230,100, 220,80"></polygon>
+    </svg>
+</body>
+</html>

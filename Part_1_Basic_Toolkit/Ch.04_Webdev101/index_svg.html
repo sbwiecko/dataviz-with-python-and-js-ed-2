@@ -47,15 +47,16 @@
   <rect x="240" y="5" width="55" height="30"></rect>
   <polygon points="210,100, 230,100, 220,80"></polygon>
   <text id="title" text-anchor="middle" x="150" y="20">A Dummy Chart</text>
-  <text
-    x="20"
-    y="20"
-    transform="rotate(-90,20,20)"
-    text-anchor="end"
-    dy="0.71em"
-  >
-    y axis label
+  <!--text-anchor: where text is placed relative to its x-position -->
+  <text 
+  x="20"
+  y="20"
+  transform="rotate(-90,20,20)"
+  text-anchor="end"
+  dy="0.71em">
+  y axis label
   </text>
+  <!-- translate the rotation point first using the extra args -->
   <path d="M20 130L60 70L110 100L160 45"></path>
 </svg>
 <!-- Third-party libraries and our JS script. -->
