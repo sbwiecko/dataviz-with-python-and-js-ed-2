@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "data-visualization-python-js",
+  "private_key_id": "a4554f7d0c08d20a40161035ca8ae0cbebe34fa6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCdVoHX+I+ZTxIV\n6r/fHd3AJGh87iKG/j6WOUbxDwMrbLTQTzQhuDmewRrNE05h8zIeS8jqtMcC4aE7\n8hLpLRgflVBHADfcnu2emu8Qtx43zv45Ij5fWMQAc56qkZWpYnMg/n4cAMuwdPXQ\nCqgBqJK5H8x3PLy5z7tTSLUmvd6Rv6lHlFnztO4Lj6LIrJlXRk8VJAzhJip4NoHu\nwYkzJWrgfxy7D5vL4fodWmpki8jhWUDxwazOEYe3z5liIAqg/HApQdQpjy3U1D+z\n1RslYfdU12a/m8ZCwBJKt20PPzFRSRoG/KDglHXQam3PCbq4egpH10ZF40UQdvs5\ndsbVUrbtAgMBAAECggEAAWewnKZgV+jkGzR/tqUcYhchJL52qfhyxCIqT0RITba4\njaSrbUKpJxEH5X1u5YKHt8wK9QecwFqV90RT5Wes77lEYIHwvcRgkFpHWMGd4Dc1\nv3peDrlq9KsTp2fJ65uQtiJ3q1XZe8+rk0pJEky4VLVjPMxazhj8DgQX9ArdhjUp\nnp9lx5/LOIEctUv8XDQTNhC3U4aVN2v0gEPwuH2cbwAfvdV2rUur+iMPtvuI/Nuz\n/qO05ES87c5s6Uvzea0DzCuyupTokwSLl4PHl6ZwxwlEYpL3DHneRwgn1HI2tTer\n6hgfTJa5dBdDiiz2vf8nYD7ejETddE1vFduszfvvOQKBgQDOJPWuX9YZMjQ8W0DD\naCrsLfMozh8YlbfaEF1kRP7ZlfwnXyowuOMvxojP1p+7yuDtFa8Rk1pXzS3DxJgU\nucYPojX/CCDgDD7kaPmGjmlLkCiM4ucXTB8xPE06cIiQqcVm5FZPLrhRnJWYCYF0\n8fk1/Qy0Va1g+hpZA5drB/Z/+QKBgQDDY8mwfTOmPiVlJ61hR2KBIg5F11wKxlDC\nrHEN4vXwDZNde7zzw491BD0qHkVMO3U4evycxW4pOfptFY2/K5BHS3Mbisn8BK0l\n5qKrQcT6S5uHlljFhCuKKaxrAK0n2OLj5pkGQcLAqS7+6mIkxHiS8R9NF/HGRP73\nKS7J2mDTlQKBgQDMroYCjcXXXrHe+/xiCZwUxcsaSQ83KfFS48zXMmqZQQMNVMBf\ngDSTy10sgL45iEetIEqj+NtLMr6uExWt/odaHoXepAOAcqg/wrt/jwedr5WTzfgG\ned6+1FEaJYJzoR4P+8h29rysy/z86PNRWrFHmepzZF6yW6Ktn5NJAq8OgQKBgAcK\nv6gmuwfQ0ZQ1u9/3rKsuyQjnXB/fSeXaRTDU7zw5oQgLf6HheHglMPclpCW9NtpU\nRGp6CyBdQJNR5YvwTADlzT4+4Ey+9maZS1+UvT6wHujiGEz2GIOgQOCSY6s9+99u\n3jEFiblb35+8XtEoa5gQLKqgpEwbDH1n9JG91yOJAoGAKbOQjxj/k4NrakdZZqz9\nyy+MgtYxLewgzApSxUSWEVo5HWIi1v/8wtzR+RAW+DyVMH0RZW61He+yzis6X+0y\nkFZ5q9DnB0oX5rtlfOoCJaI9EeRjif3tvnAa+NiVjepmjM6BIVhRlG3WMsCjRIpb\n0B20NaM5i7ci4WbVtATBYm4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "course-dataviz-python-js@data-visualization-python-js.iam.gserviceaccount.com",
+  "client_id": "110509362364737175683",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/course-dataviz-python-js%40data-visualization-python-js.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
