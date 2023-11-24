@@ -3,7 +3,6 @@ import re
 
 BASE_URL = 'http://en.wikipedia.org'
 
-
 class NWinnerItem(scrapy.Item):
     name = scrapy.Field()
     link = scrapy.Field()
@@ -25,11 +24,10 @@ class NWinnerSpider(scrapy.Spider):
     name = 'nwinners_full'
     allowed_domains = ['en.wikipedia.org']
     start_urls = [
-        "http://en.wikipedia.org/wiki/List_of_Nobel_laureates_by_country"
+        "http://en.wikipedia.org/wiki/List_of_Nobel_laureates_by_country",
     ]
 
     def parse(self, response):
-        filename = response.url.split('/')[-1]
         h3s = response.xpath('//h3')
 
         for h3 in h3s:
@@ -39,7 +37,10 @@ class NWinnerSpider(scrapy.Spider):
                 for w in winners.xpath('li'):
                     wdata = process_winner_li(w, country[0])
                     request = scrapy.Request(
-                        wdata['link'], callback=self.parse_bio, dont_filter=True)
+                        wdata['link'],
+                        callback=self.parse_bio,
+                        dont_filter=True,
+                    )
                     request.meta['item'] = NWinnerItem(**wdata)
                     yield request
                     # yield NWinnerItem(**wdata)
@@ -53,9 +54,11 @@ class NWinnerSpider(scrapy.Spider):
             url = href[0]
             wiki_code = url.split('/')[-1]
             url = 'https://wikidata.org/wiki/' + wiki_code
-            request = scrapy.Request(url,
-                                     callback=self.parse_wikidata,
-                                     dont_filter=True)
+            request = scrapy.Request(
+                url,
+                callback=self.parse_wikidata,
+                dont_filter=True,
+            )
             request.meta['item'] = item
             yield request
 
@@ -70,10 +73,10 @@ class NWinnerSpider(scrapy.Spider):
         ]
 
         for prop in property_codes:
-
-            link_html = ''
-            if prop.get('link'):
-                link_html = '/a'
+            # link_html = ''
+            # if prop.get('link'):
+            #     link_html = '/a'
+            link_html = '/a' if prop.get('link') else ''
 
             code_block = response.xpath('//*[@id="%s"]' % (prop['code']))
             # continue if the code_block exists
@@ -90,13 +93,16 @@ class NWinnerSpider(scrapy.Spider):
 
 
 def get_persondata(table, item):
-    fields = ['Date of birth', 'Place of birth',
-              'Date of death', 'Place of death']
+    fields = (
+        'Date of birth',
+        'Place of birth',
+        'Date of death',
+        'Place of death',
+    )
     for tr in table.xpath('tr'):
         label = tr.xpath('td[@class="persondata-label"]/text()').extract()
         if label and label[0] in fields:
-            text = ' '.join(
-                tr.xpath('td[not(@class)]/descendant-or-self::text()').extract())
+            text = ' '.join(tr.xpath('td[not(@class)]/descendant-or-self::text()').extract())
             print(text)
             item[label[0].lower().replace(' ', '_')] = text
 

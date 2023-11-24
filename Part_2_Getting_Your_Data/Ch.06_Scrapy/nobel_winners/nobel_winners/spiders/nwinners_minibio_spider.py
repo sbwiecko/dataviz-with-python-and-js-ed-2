@@ -29,7 +29,6 @@ class NWinnerSpiderBio(scrapy.Spider):
 
     def parse(self, response):
 
-        filename = response.url.split('/')[-1]
         h3s = response.xpath('//h3')
 
         for h3 in h3s[:2]:
@@ -41,11 +40,14 @@ class NWinnerSpiderBio(scrapy.Spider):
                     wdata['link'] = BASE_URL + w.xpath('a/@href').extract()[0]
 
                     # print(wdata)
-                    request = scrapy.Request(wdata['link'],
-                                             callback=self.get_mini_bio,
-                                             dont_filter=True)
+                    request = scrapy.Request(
+                        wdata['link'],
+                        callback=self.get_mini_bio,
+                        dont_filter=True,
+                    )
                     request.meta['item'] = NWinnerItemBio(**wdata)
                     yield request
+
 
     def get_mini_bio(self, response):
         BASE_URL_ESCAPED = 'http:\/\/en.wikipedia.org'

@@ -33,7 +33,7 @@ class NobelImagesPipeline(ImagesPipeline):
             yield scrapy.Request(image_url)
 
     def item_completed(self, results, item, info):
-        image_paths = [img'path'] for ok, img in results if ok]
+        image_paths = [img['path'] for ok, img in results if ok]
         if not image_paths:
             raise DropItem("Item contains no images")
         adapter = ItemAdapter(item)

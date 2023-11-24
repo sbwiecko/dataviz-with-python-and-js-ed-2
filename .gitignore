@@ -1,4 +1,5 @@
 node_modules/
+__pycache__
 
 # Logs
 logs
@@ -15,3 +16,9 @@ yarn-error.log*
 # databases
 *.db*
 *.csv
+
+# scrapy logs and more
+.scrapy/
+
+# images
+*.jpg
