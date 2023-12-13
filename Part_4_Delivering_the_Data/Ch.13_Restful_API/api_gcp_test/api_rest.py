@@ -1,11 +1,15 @@
 from flask import Flask, request
+from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy # SQLAlchemy optimized for Flask
 from flask_marshmallow import Marshmallow  # SQL -> JSON
 import os
 
 # Init app
 app = Flask(__name__)
-basedir = os.path.abspath(os.path.dirname(__file__))
+CORS(app) #allows requests from any domain to access the data server
+# basedir = os.path.abspath(os.path.dirname(__file__))
+# app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{basedir}/data/nobel_winners_cleaned_api_test.db'
+# relative path to the database file below
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data/nobel_winners_cleaned_api_test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Init db
@@ -55,7 +59,16 @@ winner_schema = WinnerSchema()           # single records
 winners_schema = WinnerSchema(many=True) # multiple records
 
 
-# addinf RESTful API routes
+@app.route("/")
+def hello():
+    """Return a friendly HTTP greeting.
+    Returns:
+        A string with the words 'Hello World!'.
+    """
+    return "Hello World!"
+
+
+# adding RESTful API routes
 @app.route('/winners/')
 def winner_list():
     """
@@ -111,4 +124,4 @@ def update_winner(id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="127.0.0.1", port=8080, debug=True)

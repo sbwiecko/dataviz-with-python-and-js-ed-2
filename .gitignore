@@ -11,10 +11,10 @@ yarn-error.log*
 .ipynb_checkpoints/
 
 # environments
-.env
+.env*
 
 # databases
-*.db*
+*.db
 *.csv
 
 # scrapy logs and more

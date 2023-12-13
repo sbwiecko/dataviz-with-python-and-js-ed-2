@@ -1,12 +1,6 @@
 ## RESTful Data with Flask
 
-In the last chapter we saw how to build a very simple
-data API with Flask and dataset. For many simple data visualizations this kind of
-quick and dirty API is fine but as the data demands become more advanced it helps
-to have an API that respects some conventions for retrieval and, sometimes, creation,
-update and delete. In “Using Python to Consume Data from a Web API” we covered the types of web API and why RESTful
-APIs are acquiring a well deserved prominence. In this chapter we’ll see how easy it is to combine a few Flask
-libraries into a flexible RESTful API.
+In the last chapter we saw how to build a very simple data API with Flask and dataset. For many simple data visualizations this kind of quick and dirty API is fine but as the data demands become more advanced it helps to have an API that respects some conventions for retrieval and, sometimes, creation, update and delete. In "Using Python to Consume Data from a Web API" we covered the types of web API and why RESTful APIs are acquiring a well deserved prominence. In this chapter we'll see how easy it is to combine a few Flask libraries into a flexible RESTful API.
 
 ### The Basic RESTful API
 

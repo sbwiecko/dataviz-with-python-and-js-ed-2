@@ -4,8 +4,7 @@
     <h2>{{ heading }}</h2>
     <ul>
         {% for winner in winners %}
-        <li><a href="{{ 'http://wikipedia.com/wiki/'
-                     + winner.name }}">
+        <li><a href="{{ 'http://wikipedia.com/wiki/' + winner.name }}">
             {{ winner.name }}</a>
             {{ ', category: ' + winner.category }}
         </li>
