@@ -45,7 +45,7 @@ let availableGroups = ["gender", "category"];
 availableGroups.forEach((g) => {
   d3.select("#nobel-group")
     .append("option")
-    .property("selected", g === selectedGroup)
+    //.property("selected", g === selectedGroup)
     .attr("value", g)
     .text(g);
 });
