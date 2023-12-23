@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+
+<style>
+  font-family: sans-serif;
+</style>
+
+<body>
+  <h2 id="title">title holder</h2>
+  <ul id="silly-list">
+    <li id="item-1">First Item</li>
+    <li id="item-2">Second Item</li>
+    <li id="item-3">Third Item</li>
+  </ul>
+  <svg viewBox="0 0 200 100">
+    <!-- Example of a polygon with the default fill -->
+    <polygon id="poly1" points="0,100 50,25 50,75 100,0" />
+
+    <!-- Example of the same polygon shape with stroke and no fill -->
+    <polygon id="poly2" points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
+  </svg>
+</body>
+<!-- Third-party libraries and our JS script. -->
+<script src="http://d3js.org/d3.v7.min.js"></script>
+<script>
+  d3.select("#poly2")
+  .attr("fill", "blue");
+
+  console.log(
+    d3.select("#silly-list")
+  .html()
+  )
+
+  console.log(
+    d3.select("#silly-list")
+  .text()
+  )
+</script>
